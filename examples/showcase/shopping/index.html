@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Colorme Shopping</title>
-    <meta name="description" content="Shopping - A-Frame">
+    <title>Shopping</title>
+    <meta name="description" content="Shopping">
     <script src="../../../dist/aframe-master.js"></script>
   </head>
   <body>
     <a-scene background="color: #27e1f8">
       <a-assets>
-        <a-asset-item id="why-male-models" src="man/man.dae"></a-asset-item>
+
+        <a-asset-item id="Tee_L" src="Tee_L.dae"></a-asset-item>
+        <!--<a-asset-item id="why-male-models" src="man/man.dae"></a-asset-item>-->
         <img id="surisuri" src="surisuri.png">
         <img id="goggles" src="goggles.png">
         <img id="mozvr" src="../../assets/img/mozvr.png">
@@ -19,6 +21,15 @@
         <img id="tshirt2" src="tshirt2.jpg">
       </a-assets>
 
+
+<a-entity id="model" position="0 0 -3">
+  <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
+               easing="linear" repeat="indefinite"></a-animation>
+  <a-collada-model position="-.35 0 .55" rotation="0 -20 0" scale="1.5 1.5 1.5"
+                   src="#Tee_L.dae"></a-collada-model>
+  <a-image src="#shadow2" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
+</a-entity>
+      <!--
       <a-entity id="model" position="0 0 -3">
         <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
                      easing="linear" repeat="indefinite"></a-animation>
@@ -26,9 +37,10 @@
                          src="#why-male-models"></a-collada-model>
         <a-image src="#shadow2" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
       </a-entity>
+    -->
 
       <a-curvedimage id="tshirt2" src="#tshirt2" radius="5.7" theta-length="10" height="1"
-                     position="0 2.6 -1" opacity="0.5">
+                     position="0 2.6 -1" opacity="1">
         <a-animation attribute="rotation" from="0 10 0" to="0 200 0" delay="500"
                      dur="1000"></a-animation>
       </a-curvedimage>
